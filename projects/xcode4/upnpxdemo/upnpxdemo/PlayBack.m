@@ -76,7 +76,9 @@ static PlayBack *_playback = nil;
 
 -(int)Play:(NSInteger)position{
     //Do we have a Renderer & a playlist ?
-    if(renderer == nil || playlist == nil){
+	// why do we need a renderer to play?
+//    if(renderer == nil || playlist == nil){
+		if( playlist == nil){
         return -1;
     }
     
